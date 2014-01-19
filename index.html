@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+		var request;
+		var weatherData;
+		var dataArray;
+		var temp;
+		var txtTemp;
+		var allData;
+		
+		function getWeatherData(){
+			
+			request = new XMLHttpRequest();
+			request.onreadystatechange = statechange;
+			request.open("GET", "http://weather.nuigalway.ie/getLiveData.php", true);
+			request.send(null);
+		}
+		
+		function statechange(){
+			if (request.readyState == 4 && request.status == 200){
+				weatherData = request.responseText;
+				dataArray = weatherData.split(",");
+				temp = dataArray[2];
+				document.getElementById('texTemp').innerHTML = temp;
+				
+			}
+		}
+		
+	</script>
+	
+</head>
+
+<body onload="getWeatherData()">
+	<h1> The temp is </h1>
+	<h1 id = "texTemp" > </h1>				  
+</body>
+</html>
