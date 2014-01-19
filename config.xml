@@ -1,0 +1,17 @@
+
+<widget xmlns="http://www.w3.org/ns/widgets" 
+		id="com.example.weather" version="0.0.1"
+		 xmlns:gap = "http://phonegap.com/ns/1.0">
+        <name>campus weather 2</name>
+        <description>
+            A weather app built using phone gap.
+        </description>
+        
+            
+        <icon src="shower1.png" />
+        <gap:splash src="weatherstation.jpg" />
+        <content src="index.html" />
+        <access origin="*" />
+        <preference name="Fullscreen" value="true" />
+        <preference name="WebViewBounce" value="true" />
+    </widget>
