@@ -24,7 +24,7 @@
 				dataArray = weatherData.split(",");
 				temp = dataArray[2];
 				document.getElementById('texTemp').innerHTML = temp;
-				
+				//setTimeout("getWeatherData()", 30000); 
 			}
 		}
 		
@@ -32,7 +32,7 @@
 	
 </head>
 
-<body onload="getWeatherData()" bgcolor = "3366ff">
+<body onload="getWeatherData()">
 	<pre>
 		
 		
