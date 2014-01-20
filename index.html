@@ -16,6 +16,7 @@
 			request.onreadystatechange = statechange;
 			request.open("GET", "http://weather.nuigalway.ie/getLiveData.php", true);
 			request.send(null);
+			
 		}
 		
 		function statechange(){
@@ -24,8 +25,11 @@
 				dataArray = weatherData.split(",");
 				temp = dataArray[2];
 				document.getElementById('texTemp').innerHTML = temp;
-				//setTimeout("getWeatherData()", 30000); 
+				setTimeout("getWeatherData()", 10000); 
 			}
+		}
+		function printTemp(){
+			
 		}
 		
 	</script>
